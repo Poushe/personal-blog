@@ -1,0 +1,7 @@
+<h1>Personal Blog</h1>
+{% for proj in seeallblog %}
+<p>Name: {{proj.title}}<a href="{% url 'blogupdate' proj.id %}">Edit</a><a href="{% url 'deleteblog' proj.id%}">Delete</a></p>
+<p>Description: {{proj.description}}</p>
+<p>Author: {{proj.conauthor}}</p>
+
+{% endfor %}
